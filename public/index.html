@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHATROOM</title>
+    <link rel="icon" href="imgs/child.png">
+    <link rel="stylesheet" href="chatroom.css">
+</head>
+
+<body>
+    <div class="login">
+        <h3 class="login-title">Login</h3>
+        <div class="login-item">
+            <div class="login-label">username:</div>
+            <input class="login-input" type='text' id='username' placeholder="please input username">
+            </input>
+        </div>
+        <div class="login-item">
+            <div class="login-label">password:</div>
+            <input class="login-input" type='password' id='password' minlength="6" maxlength="20">
+            </input>
+        </div>
+        <div class="login-item">
+            <button class='form-btn' id='login-btn' onclick="doLogin()"> login</button>
+            <!-- <input class='form-btn' id='login-btn' type="submit" value="login"> -->
+        </div>
+
+    </div>
+    <div class="wrap chatRoom">
+        <div class="left">
+            <div class="left_userInfo">
+                <img src="" alt="" class="user-avatar">
+                <div class="left-userName"></div>
+            </div>
+            <div class="friendList"></div>
+        </div>
+
+        <div class="right">
+            <div class="rightHead">
+                CHATROOM
+                <!-- friendName -->
+            </div>
+            <div class='center-logo-wrap'>
+                <img src="imgs/child.png" class="logo">
+                <div class="slogan">Many things are lost by not asking</div>
+            </div>
+            <div class="msg-wrap">
+                <!-- message list -->
+            </div>
+
+            <div class="input-wrap">
+                <input class="input" id='bottomInput' placeholder="Say something...">
+                <button onclick="sendMessage()" default='True'>发送</button>
+            </div>
+        </div>
+    </div>
+    <script src='chatroom.js'></script>
+    <script src="https://gw.alipayobjects.com/os/lib/socket.io-client/4.3.2/dist/socket.io.js"></script>
+</body>
+
+</html>
